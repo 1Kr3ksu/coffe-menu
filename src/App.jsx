@@ -1,10 +1,11 @@
 import { useState } from 'react'
-// import CoffeeList from './CoffeeList.jsx'
+
+import CoffeeList from './CoffeeList.jsx'
 import CoffeeCard from './CoffeeCard.jsx'
 import './App.css'
 
 function App() {
-  const kawy = [
+  const coffeeData = [
     { id: 1, name: "Espresso", type: "Czarna kawa", description: "Klasyczna, mocna kawa podawana w małej filiżance", newPosition: false },
     { id: 2, name: "Cappuccino", type: "Mleczna kawa", description: "Espresso z parowanym mlekiem i pianką", newPosition: false },
     { id: 3, name: "Latte", type: "Mleczna kawa", description: "Delikatna kawa z dużą ilością mleka", newPosition: false },
@@ -17,14 +18,15 @@ function App() {
     { id: 10, name: "Ristretto", type: "Czarna kawa", description: "Intensywne espresso z mniejszą ilością wody", newPosition: false },
     { id: 11, name: "Lungo", type: "Czarna kawa", description: "Wydłużone espresso z większą ilością wody", newPosition: false },
     { id: 12, name: "Frappé", type: "Zimna kawa", description: "Mrożona kawa z lodem i pianką", newPosition: true }
-  ]
+  ];
 
   return (
     <>
+    <h1 className='Menu'>Menu Kawiarni</h1>
       { 
-        kawy.map(
+        coffeeData.map(
           (kawa) => (
-            <CoffeeCard  key={kawa.id} name={kawa.name} type={kawa.type} description={kawa.description} newPosition={kawa.newPosition} />
+            <CoffeeCard  key={kawa.id} name={coffeeData.name} type={kawa.type} description={kawa.description} newPosition={kawa.newPosition} />
           )
         )
       }

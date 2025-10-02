@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+body{
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #2F1B14;
+    text-align: center;
+    margin: 2rem 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: titleBounce 3s ease-in-out infinite;
+}
+
+@keyframes titleBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    10% {
+        transform: translateY(-10px) scale(1.02);
+    }
+    40% {
+        transform: translateY(-5px) scale(1.01);
+    }
+    60% {
+        transform: translateY(-3px) scale(1.005);
+    }
+}
+
+
+
+
+.Menu{
+    color: #2F1B14;
+}

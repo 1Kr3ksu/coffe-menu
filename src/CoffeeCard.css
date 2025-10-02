@@ -1,0 +1,12 @@
+.coffee-list{
+    display: flex;
+    padding: 12px;
+}
+.coffee-cards{
+    border-radius: 12px;
+    box-shadow: 6px 6px 4px grey;
+    margin:6px;
+    padding: 0 12px;
+    background-color: #F5E6D3;
+    width:300px
+}
