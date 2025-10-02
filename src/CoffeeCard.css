@@ -1,12 +1,56 @@
 .coffee-list{
-    display: flex;
-    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.coffee-cards{
+
+.coffee-card{
     border-radius: 12px;
-    box-shadow: 6px 6px 4px grey;
-    margin:6px;
-    padding: 0 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 1.5rem;
     background-color: #F5E6D3;
-    width:300px
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Style dla zawartości karty */
+.coffee-card h3 {
+    color: #2F1B14;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.new-badge {
+    background: #e74c3c;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.coffee-type {
+    color: #8b7355;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.coffee-description {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }

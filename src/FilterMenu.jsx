@@ -1,3 +1,5 @@
+import './FilterMenu.css'
+
 function FilterMenu({ activeFilter, onFilterChange }){
   const filters = [
     { id: 'wszystkie', label: 'Wszystkie' },
@@ -25,4 +27,5 @@ function FilterMenu({ activeFilter, onFilterChange }){
     </div>
   )
 }
+
 export default FilterMenu

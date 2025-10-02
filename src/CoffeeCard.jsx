@@ -1,17 +1,13 @@
 import './CoffeeCard.css'
+
 function CoffeeCard({ name, type, description, newPosition }) {
     return (
-        <>
-        <div className="coffee-list">
-        <div className="coffee-cards">
-            <h1>{name}</h1>
-            <h4>{type}</h4>
-            <p>{description}</p>
-            <p>{newPosition}</p> {true / false}
-              </div>
-              </div>
-        </>
-      
+        <div className="coffee-card">
+            <h3>{name} {newPosition && <span className="new-badge">NOWOŚĆ</span>}</h3>
+            <h4 className="coffee-type">{type}</h4>
+            <p className="coffee-description">{description}</p>
+        </div>
     )
 }
+
 export default CoffeeCard

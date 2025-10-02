@@ -1,0 +1,54 @@
+
+.filter-menu{
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(40px);
+}
+
+.filter-menu h3 {
+    color: #2F1B14;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+.filter-btn{
+    background: #F5E6D3;
+    border: 2px solid #8B4513;
+    color: #2F1B14;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    background: #8B4513;
+    color: #F5E6D3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn.active {
+    background: #2F1B14;
+    color: #F5E6D3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(47, 27, 20, 0.4);
+}
