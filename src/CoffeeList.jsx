@@ -1,9 +1,9 @@
 import CoffeeCard from './CoffeeCard.jsx'
 
-function CoffeeList({ kawy }) {  // <-- props nazywa się 'kawy'
+function CoffeeList({ kawy }) {  
   return (
     <div className="coffee-list">
-      {kawy.map((kawa) => (  // <-- używasz 'kawy' z props
+      {kawy.map((kawa) => (  
         <CoffeeCard 
           key={kawa.id} 
           name={kawa.name} 
