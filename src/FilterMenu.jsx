@@ -1,9 +1,11 @@
 function FilterMenu({ activeFilter, onFilterChange }){
   const filters = [
     { id: 'wszystkie', label: 'Wszystkie' },
-    { id: 'espresso', label: 'Espresso' },
-    { id: 'przelewy', label: 'Przelewy' },
-    { id: 'mrozone', label: 'Mrożone' }
+    { id: 'czarna', label: 'Czarne kawy' },
+    { id: 'mleczna', label: 'Mleczne kawy' },
+    { id: 'czekoladowa', label: 'Czekoladowe' },
+    { id: 'deserowa', label: 'Deserowe' },
+    { id: 'zimna', label: 'Mrożone' }
   ]
 
   return (

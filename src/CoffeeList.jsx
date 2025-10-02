@@ -1,15 +1,15 @@
 import CoffeeCard from './CoffeeCard.jsx'
 
-function CoffeeList({ kawy }) {  
+function CoffeeList({ coffees }) {  
   return (
     <div className="coffee-list">
-      {kawy.map((kawa) => (  
+      {coffees.map((coffee) => (  
         <CoffeeCard 
-          key={kawa.id} 
-          name={kawa.name} 
-          type={kawa.type} 
-          description={kawa.description} 
-          newPosition={kawa.newPosition} 
+          key={coffee.id} 
+          name={coffee.name} 
+          type={coffee.type} 
+          description={coffee.description} 
+          newPosition={coffee.newPosition} 
         />
       ))}
     </div>
