@@ -1,13 +1,34 @@
 import { useState } from 'react'
-
+// import CoffeeList from './CoffeeList.jsx'
+import CoffeeCard from './CoffeeCard.jsx'
 import './App.css'
 
 function App() {
-
+  const kawy = [
+    { id: 1, name: "Espresso", type: "Czarna kawa", description: "Klasyczna, mocna kawa podawana w małej filiżance", newPosition: false },
+    { id: 2, name: "Cappuccino", type: "Mleczna kawa", description: "Espresso z parowanym mlekiem i pianką", newPosition: false },
+    { id: 3, name: "Latte", type: "Mleczna kawa", description: "Delikatna kawa z dużą ilością mleka", newPosition: false },
+    { id: 4, name: "Americano", type: "Czarna kawa", description: "Espresso rozcieńczone gorącą wodą", newPosition: false },
+    { id: 5, name: "Macchiato", type: "Mleczna kawa", description: "Espresso z odrobiną parowanego mleka", newPosition: true },
+    { id: 6, name: "Mocha", type: "Czekoladowa kawa", description: "Kawa z czekoladą i bitą śmietaną", newPosition: true },
+    { id: 7, name: "Flat White", type: "Mleczna kawa", description: "Silne espresso z gładkim, mikropianowanym mlekiem", newPosition: true },
+    { id: 8, name: "Cortado", type: "Mleczna kawa", description: "Hiszpańska kawa z równymi proporcjami espresso i mleka", newPosition: true },
+    { id: 9, name: "Affogato", type: "Deserowa kawa", description: "Lody waniliowe polane gorącym espresso", newPosition: true },
+    { id: 10, name: "Ristretto", type: "Czarna kawa", description: "Intensywne espresso z mniejszą ilością wody", newPosition: false },
+    { id: 11, name: "Lungo", type: "Czarna kawa", description: "Wydłużone espresso z większą ilością wody", newPosition: false },
+    { id: 12, name: "Frappé", type: "Zimna kawa", description: "Mrożona kawa z lodem i pianką", newPosition: true }
+  ]
 
   return (
     <>
-      
+      { 
+        kawy.map(
+          (kawa) => (
+            <CoffeeCard  key={kawa.id} name={kawa.name} type={kawa.type} description={kawa.description} newPosition={kawa.newPosition} />
+          )
+        )
+      }
+
     </>
   )
 }
