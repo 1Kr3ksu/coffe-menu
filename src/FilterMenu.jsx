@@ -22,7 +22,14 @@ function FilterMenu({ activeFilter, onFilterChange }){
           >
             {filter.label}
           </button>
+          
         ))}
+   <button
+  className={`filter-btn ${activeFilter === 'inne' ? 'active' : ''}`}
+  onClick={() => onFilterChange('inne')}
+>
+  Inne
+</button>
       </div>
     </div>
   )

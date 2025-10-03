@@ -28,23 +28,31 @@ const handleFilterChange = (filterId) => {
 
 const displayedCoffees = activeFilter === 'wszystkie'
     ? coffeeData 
-    : coffeeData.filter(coffee => {
-        if (activeFilter === 'czarna') return coffee.type === 'Czarna kawa'
-        if (activeFilter === 'mleczna') return coffee.type === 'Mleczna kawa'  
-        if (activeFilter === 'czekoladowa') return coffee.type === 'Czekoladowa kawa'
-        if (activeFilter === 'deserowa') return coffee.type === 'Deserowa kawa'
-        if (activeFilter === 'zimna') return coffee.type === 'Zimna kawa'
-        return true
-    })
+    : activeFilter === 'inne'
+      ? []
+      : coffeeData.filter(coffee => {
+          if (activeFilter === 'czarna') return coffee.type === 'Czarna kawa'
+          if (activeFilter === 'mleczna') return coffee.type === 'Mleczna kawa'  
+          if (activeFilter === 'czekoladowa') return coffee.type === 'Czekoladowa kawa'
+          if (activeFilter === 'deserowa') return coffee.type === 'Deserowa kawa'
+          if (activeFilter === 'zimna') return coffee.type === 'Zimna kawa'
+          return true
+      })
 
-  return (
+ return (
     <>
       <h1 className='Menu'>Menu Kawiarni</h1>
       <FilterMenu 
         activeFilter={activeFilter} 
         onFilterChange={handleFilterChange} 
       />
-      <CoffeeList coffees={displayedCoffees} />
+      {displayedCoffees.length === 0 ? (
+        <div className="no-coffees">
+        <p>Przepraszamy, obecnie nie mamy kaw tego typu.</p>
+        </div>
+      ) : (
+        <CoffeeList coffees={displayedCoffees} />
+      )}
     </>
   )
 }
