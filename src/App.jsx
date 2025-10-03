@@ -17,6 +17,9 @@ import './App.css'
     { id: 11, name: "Lungo", type: "Czarna kawa", description: "Wydłużone espresso z większą ilością wody", newPosition: false },
     { id: 12, name: "Frappé", type: "Zimna kawa", description: "Mrożona kawa z lodem i pianką", newPosition: true },
     { id: 13, name: "Irish Coffee", type: "Inne", description: "Kawa z irlandzką whiskey, cukrem i bitą śmietaną", newPosition: true },
+    { id: 14, name: "Kawa po turecku", type: "Inne", description: "Tradycyjna kawa parzona w tygielku", newPosition: false },
+    { id: 15, name: "Kawa po wiedeńsku", type: "Inne", description: "Kawa z bitą śmietaną i posypką czekoladową", newPosition: false },
+    
   ];
 function App() {
 //implementacja stanu
