@@ -15,7 +15,8 @@ import './App.css'
     { id: 9, name: "Affogato", type: "Deserowa kawa", description: "Lody waniliowe polane gorącym espresso", newPosition: true },
     { id: 10, name: "Ristretto", type: "Czarna kawa", description: "Intensywne espresso z mniejszą ilością wody", newPosition: false },
     { id: 11, name: "Lungo", type: "Czarna kawa", description: "Wydłużone espresso z większą ilością wody", newPosition: false },
-    { id: 12, name: "Frappé", type: "Zimna kawa", description: "Mrożona kawa z lodem i pianką", newPosition: true }
+    { id: 12, name: "Frappé", type: "Zimna kawa", description: "Mrożona kawa z lodem i pianką", newPosition: true },
+    { id: 13, name: "Irish Coffee", type: "Inne", description: "Kawa z irlandzką whiskey, cukrem i bitą śmietaną", newPosition: true },
   ];
 function App() {
 //implementacja stanu
@@ -29,19 +30,20 @@ const handleFilterChange = (filterId) => {
 const displayedCoffees = activeFilter === 'wszystkie'
     ? coffeeData 
     : activeFilter === 'inne'
-      ? []
+      ? coffeeData.filter(coffee => coffee.type === 'Inne')
       : coffeeData.filter(coffee => {
           if (activeFilter === 'czarna') return coffee.type === 'Czarna kawa'
           if (activeFilter === 'mleczna') return coffee.type === 'Mleczna kawa'  
           if (activeFilter === 'czekoladowa') return coffee.type === 'Czekoladowa kawa'
           if (activeFilter === 'deserowa') return coffee.type === 'Deserowa kawa'
           if (activeFilter === 'zimna') return coffee.type === 'Zimna kawa'
+          if (activeFilter === 'Inne') return coffee.type === 'Inne'
           return true
       })
 
  return (
     <>
-      <h1 className='Menu'>Menu Kawiarni</h1>
+      <h1 className='menu'>Menu Kawiarni</h1>
       <FilterMenu 
         activeFilter={activeFilter} 
         onFilterChange={handleFilterChange} 
